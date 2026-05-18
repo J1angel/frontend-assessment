@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Assessment Starter
 
-## Getting Started
+Next.js assessment boilerplate with **TypeScript**, **GSAP**, **SCSS**, and **Recharts**.
 
-First, run the development server:
+## Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- TypeScript
+- [GSAP](https://gsap.com/) + ScrollTrigger
+- SCSS modules + shared tokens
+- [Recharts](https://recharts.org/)
+
+## Getting started
 
 ```bash
+cd frontend-assessment
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                      # layout.tsx, page.tsx
+├── components/sections/      # HeroSection (GSAP), ChartSection (Recharts)
+├── hooks/                    # usePrefersReducedMotion
+├── lib/gsap/                 # register plugins, defaults
+├── lib/charts/               # mock chart data
+├── styles/                   # _variables, _mixins, _breakpoints, globals
+└── types/
+```
 
-## Learn More
+## Before you code
 
-To learn more about Next.js, take a look at the following resources:
+1. Open Figma and fill in **[PLANNING.md](./PLANNING.md)** (or record a short walkthrough).
+2. Update design tokens in `src/styles/_variables.scss`.
+3. Replace placeholder sections with your Figma sections (duplicate `HeroSection` / `ChartSection` folders).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding a new section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create `src/components/sections/YourSection/`
+2. Add `YourSection.tsx`, `YourSection.module.scss`, `index.ts`
+3. Import in `src/app/page.tsx`
+4. Use `"use client"` only when using GSAP or Recharts
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Development server |
+| `npm run build` | Production build |
+| `npm run start` | Run production build |
+| `npm run lint` | ESLint |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Figma
+
+https://www.figma.com/design/D8ImoTwY3hHlyQwN04EJFG/Frontend?node-id=0-1&p=f

@@ -1,0 +1,19 @@
+key,value
+grid_size,10
+rest_col,7
+rest_row,2
+hover_col,6
+hover_row,3
+secondary_col,9
+secondary_row,4
+secondary_opacity,0.22
+footer,Brows fall in the top 20% for natural fullness.
+label_top,Bold
+label_bottom,Subtle
+label_left,Feminine
+label_right,Masculine
+opacity_0,1
+opacity_1,0.58
+opacity_2,0.38
+opacity_3,0.24
+opacity_default,0.11

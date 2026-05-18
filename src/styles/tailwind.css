@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "F37 Zagma Mono Trial";
+  src: url("/fonts/F37ZagmaMonoTrial-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --breakpoint-xs: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: 1920px;
+
+  --color-qoves-dark: #233137;
+  --color-qoves-muted: #9aaeb5;
+  --color-qoves-body: #515255;
+  --color-qoves-label: #798f97;
+  --color-qoves-border: rgb(205 219 225 / 60%);
+  --color-qoves-pill-border: #c7d1d54d;
+
+  /* creates font-zagma utility */
+  --font-zagma: "F37 Zagma Mono Trial", ui-monospace, monospace;
+}
+
+@theme inline {
+  /* creates font-pp-neue utility */
+  --font-pp-neue: var(--font-pp-neue), system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    color: var(--color-qoves-dark);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
