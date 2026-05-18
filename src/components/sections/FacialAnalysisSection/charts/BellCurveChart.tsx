@@ -69,7 +69,6 @@ export function BellCurveChart({ className = "" }: { className?: string }) {
                   fill="#b8c5cc"
                   stroke="#fff"
                   strokeWidth={1.5}
-                  isFront
                 />
               </AreaChart>
             </ResponsiveContainer>
